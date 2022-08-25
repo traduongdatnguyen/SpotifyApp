@@ -1,6 +1,7 @@
 package com.example.spotifyapp
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
@@ -12,27 +13,30 @@ class AlbumPlayMusicAdapter(val listMusic: ArrayList<Music> ):RecyclerView.Adapt
     private val dataListMusic = listMusic
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AlbumPlayMusicAdapter.ViewHolder {
-        return ViewHolder(parent)
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.view_holder_album_playmusic,parent,false)
+        return ViewHolder(v)
     }
 
     override fun onBindViewHolder(holder: AlbumPlayMusicAdapter.ViewHolder, position: Int) {
-        (holder as ViewHolder).OnBind(dataListMusic[position])
+        holder.nameMusic.text = "Yêu"
+       holder.authorMusic.text = "Hello"
     }
 
 
     override fun getItemCount(): Int {
-        return listMusic.size
+        return dataListMusic.size
     }
     //TÌM HIỂU INNER CLASS
-    inner class ViewHolder(itemView:ViewGroup): RecyclerView.ViewHolder(LayoutInflater.from(itemView.context).inflate(R.layout.activity_album_play_music,itemView,false)){
+    inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
 
-        val nameMusic: TextView = itemView.findViewById(R.id.nameMusic)
-        val imageMusic:TextView = itemView.findViewById(R.id.imageMusic)
-        val authorMusic: TextView = itemView.findViewById(R.id.authorName)
+        val nameMusic: TextView
+        val imageMusic: ImageView
+        val authorMusic: TextView
 
-        fun OnBind(music: Music) {
-            nameMusic.text = music.nameMusic.toString() +""
-            authorMusic.text = music.author.toString() +""
+        init {
+            nameMusic = itemView.findViewById(R.id.nameMusic)
+            imageMusic = itemView.findViewById(R.id.imageMusic)
+            authorMusic = itemView.findViewById(R.id.authorName)
         }
     }
 

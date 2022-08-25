@@ -9,9 +9,6 @@ import androidx.recyclerview.widget.RecyclerView
 
 class SimpleAdapter(val itemTitle: ArrayList<String>, val itemImage: ArrayList<Int>  ): RecyclerView.Adapter<SimpleAdapter.ViewHolder>() {
 
-
-
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SimpleAdapter.ViewHolder {
        val v = LayoutInflater.from(parent.context).inflate(R.layout.view_holer_cateloryhome,parent,false)
         return ViewHolder(v)
