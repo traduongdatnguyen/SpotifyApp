@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:paddingTop="20dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageLibrarian"
+            android:layout_width="wrap_content"
+            android:scaleType="centerInside"
+            android:src="@drawable/music_1"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/nameLibrarian"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:text="Crear playlist"
+            android:textColor="@color/white"
+            android:fontFamily="@font/open_sans_bold"
+            android:paddingHorizontal="10dp"
+            android:layout_height="wrap_content"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>

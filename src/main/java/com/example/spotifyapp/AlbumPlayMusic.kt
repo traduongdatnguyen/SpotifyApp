@@ -11,7 +11,7 @@ class AlbumPlayMusic : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_album_play_music)
-       val dataMusic : ArrayList<Music> = arrayListOf(Music("Yêu","image2.png","Hello"),Music("Yêu5","image2.png","Hello"))
+        val dataMusic : ArrayList<Music> = arrayListOf(Music("Yêu","image2.png","Hello"),Music("Yêu2","image2.png","Hi"),Music("Yêu3","image2.png","Hi"),Music("Yêu5","image2.png","Hello"))
 
         var adapter: RecyclerView.Adapter<AlbumPlayMusicAdapter.ViewHolder>? = null
         var layoutManager: RecyclerView.LayoutManager? = null
