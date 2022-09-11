@@ -21,18 +21,16 @@ class MainActivity : AppCompatActivity() {
 
     private var adapter: RecyclerView.Adapter<SimpleAdapter.ViewHolder>? = null
 
-    private lateinit var mytoolbar: Toolbar
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        mytoolbar = findViewById(R.id.toolbar)
+        myToolbar()
+
+
         layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
-        setSupportActionBar(mytoolbar)
-
         recyHome.layoutManager = layoutManager
-
         adapter = SimpleAdapter(titles,images)
-
         recyHome.adapter = adapter
 
         recyHome1()
@@ -47,10 +45,22 @@ class MainActivity : AppCompatActivity() {
         recyHome1.layoutManager = layoutManager
          recyHome1.adapter = adapter1
     }
+
+    private fun myToolbar(){
+        lateinit var mytoolbar: Toolbar
+        mytoolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(mytoolbar)
+    }
     fun actionIntent(view: View){
         startActivity(Intent(this@MainActivity,playmusic::class.java))
     }
     fun actionIntent1(view: View){
         startActivity(Intent(this@MainActivity,AlbumPlayMusic::class.java))
+    }
+    fun actionLibrarians(view: View){
+        startActivity(Intent(this,LibrarianMainActivity::class.java))
+    }
+    fun actionSearch(view: View){
+        startActivity(Intent(this,SearchMainActivity::class.java))
     }
 }

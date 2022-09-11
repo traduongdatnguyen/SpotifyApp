@@ -111,12 +111,9 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/player_bar_timeline" />
-
-            <com.google.android.material.progressindicator.LinearProgressIndicator
+            //tìm hiểu phần này
+            <SeekBar
+                android:id="@+id/seekbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:progress="50" />
@@ -144,18 +141,22 @@
                     android:src="@drawable/group_6" />
 
                 <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/backMusic"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/player_back" />
 
                 <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/playMusic"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/play" />
+                    android:src="@drawable/pausemusi" />
+
 
                 <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/nextMusic"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -168,9 +169,7 @@
                     android:src="@drawable/repeat_active" />
             </androidx.appcompat.widget.LinearLayoutCompat>
 
-
         </androidx.appcompat.widget.LinearLayoutCompat>
-
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 </androidx.constraintlayout.widget.ConstraintLayout>

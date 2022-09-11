@@ -74,7 +74,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="@font/open_sans_bold"
-                        android:fontSize="12sp"
+                        android:textSize="13sp"
                         android:text="Playlists"
                         android:textColor="@color/white" />
 
@@ -83,7 +83,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="@font/open_sans_bold"
-                        android:fontSize="12sp"
+                        android:textSize="13sp"
                         android:text="Playlists"
                         android:textColor="@color/white" />
 
@@ -92,7 +92,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="@font/open_sans_bold"
-                        android:fontSize="12sp"
+                        android:textSize="13sp"
                         android:text="Playlists"
                         android:textColor="@color/white" />
                 </androidx.appcompat.widget.LinearLayoutCompat>
@@ -183,99 +183,11 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
-
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/app_barBottom"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_navigation_menu"
         android:layout_gravity="bottom"
-        android:backgroundTint="#282828"
-        app:layout_behavior="com.google.android.material.bottomappbar.BottomAppBar$Behavior"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginVertical="10dp"
-            android:background="#282828"
-            android:orientation="horizontal"
-            android:weightSum="3">
-
-            <LinearLayout
-                android:id="@+id/cartBtn"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:visibility="visible">
-
-
-                <ImageView
-                    android:id="@+id/imageView5"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:srcCompat="@drawable/icon_home" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/open_sans"
-                    android:text="Inicio"
-                    android:textAlignment="center"
-                    android:textColor="#FFF"
-                    android:textSize="13sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/wishlistbtn"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/icon_search" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/open_sans"
-                    android:text="Wishlist"
-                    android:textAlignment="center"
-                    android:textColor="#FFF"
-                    android:textSize="13sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/accuserbtn"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <ImageView
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/icon_library" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/open_sans"
-                    android:text="Profile"
-                    android:textAlignment="center"
-                    android:textColor="#FFF"
-                    android:textSize="13sp" />
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </com.google.android.material.bottomappbar.BottomAppBar>
+        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
+        android:background="@color/bg_bottomNa"
+        android:layout_height="wrap_content"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
