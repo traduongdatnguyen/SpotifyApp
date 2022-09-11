@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_search_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -34,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         recyHome.adapter = adapter
 
         recyHome1()
-
+        getBottomNaviga()
 
     }
     private fun recyHome1(){
@@ -57,10 +58,22 @@ class MainActivity : AppCompatActivity() {
     fun actionIntent1(view: View){
         startActivity(Intent(this@MainActivity,AlbumPlayMusic::class.java))
     }
-    fun actionLibrarians(view: View){
-        startActivity(Intent(this,LibrarianMainActivity::class.java))
-    }
-    fun actionSearch(view: View){
-        startActivity(Intent(this,SearchMainActivity::class.java))
+
+    private fun getBottomNaviga(){
+        bottom_navigation.setOnNavigationItemReselectedListener{ item->
+            when(item.itemId){
+                R.id.page_1 -> {
+                    startActivity(Intent(this,MainActivity::class.java))
+//                    setVrModeEnabled(false,componentName)
+                }
+                R.id.page_2 -> {
+                    startActivity(Intent(this,SearchMainActivity::class.java))
+                }
+                R.id.page_3 -> {
+                    startActivity(Intent(this,LibrarianMainActivity::class.java))
+                }
+                else ->  startActivity(Intent(this,SearchMainActivity::class.java))
+            }
+        }
     }
 }
