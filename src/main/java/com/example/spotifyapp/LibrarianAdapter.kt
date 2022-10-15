@@ -7,12 +7,12 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class LibrarianAdapter(val dataLibrarians: ArrayList<DataLibrarians>):RecyclerView.Adapter<LibrarianAdapter.ViewHolder>() {
+class LibrarianAdapter(val dataLibrarians: ArrayList<DataLibrarians>): RecyclerView.Adapter<LibrarianAdapter.ViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LibrarianAdapter.ViewHolder {
-        val viewHolder = LayoutInflater.from(parent.context).inflate(R.layout.view_holder_librarian,parent,false)
-        return ViewHolder(viewHolder)
+        val parent = LayoutInflater.from(parent.context).inflate(R.layout.view_holder_librarian,parent,false)
+        return ViewHolder(parent)
     }
 
     override fun onBindViewHolder(holder: LibrarianAdapter.ViewHolder, position: Int) {
@@ -22,34 +22,13 @@ class LibrarianAdapter(val dataLibrarians: ArrayList<DataLibrarians>):RecyclerVi
     override fun getItemCount(): Int {
         return dataLibrarians.size
     }
-    class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        val nameLibrarian: TextView = itemView.findViewById(R.id.nameLibrarian)
-        val imageLibrarian : ImageView = itemView.findViewById(R.id.imageLibrarian)
+    inner class ViewHolder(view: View) :RecyclerView.ViewHolder(view) {
+        val textLibrarians :TextView = view.findViewById(R.id.nameLibrarian)
+        val imageLibrarian:ImageView = view.findViewById(R.id.imageLibrarian)
         fun onBind(dataLibrarians: DataLibrarians){
-            nameLibrarian.text = dataLibrarians.nameLibrarian
+            textLibrarians.text = dataLibrarians.nameLibrarian
+
         }
-
     }
-
 }
-//override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-//    val viewHolder = LayoutInflater.from(parent.context).inflate(R.layout.view_holder_librarian,parent,false)
-//    return ViewHolder(viewHolder)
-//}
-//
-//override fun onBindViewHolder(holder: LibrarianAdapter.ViewHolder, position: Int) {
-//    holder.onBind(dataLibrarians[position])
-//}
-//
-//override fun getItemCount(): Int {
-//    return  dataLibrarians.size
-//}
-//
-//class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-//    val imageView:ImageView = itemView.findViewById(R.id.imageLibrarian)
-//    val nameLibrarians:TextView = itemView.findViewById(R.id.nameLibrarian)
-//
-//    fun onBind(data: DataLibrarians){
-//        nameLibrarians.text = data.nameLibrarian
-//    }
-//}
+

@@ -25,7 +25,7 @@ class LibrarianMainActivity : AppCompatActivity() {
         recyclerViewLibrarian.adapter = adapter
     }
     private fun getBottomNaviga(){
-        bottom_navigation.setOnNavigationItemReselectedListener{ item->
+        bottom_navigation_lib.setOnNavigationItemReselectedListener{ item->
             when(item.itemId){
                 R.id.page_1 -> {
                     startActivity(Intent(this,MainActivity::class.java))

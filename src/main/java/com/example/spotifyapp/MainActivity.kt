@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        myToolbar()
+//        myToolbar()
 
 
         layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
@@ -42,8 +42,8 @@ class MainActivity : AppCompatActivity() {
          var adapter1: RecyclerView.Adapter<ProductoAdapter.ViewHoler>? = null
          var layoutManager:RecyclerView.LayoutManager? = null
          adapter1 = ProductoAdapter()
-        layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
-        recyHome1.layoutManager = layoutManager
+         layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
+         recyHome1.layoutManager = layoutManager
          recyHome1.adapter = adapter1
     }
 
@@ -60,11 +60,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getBottomNaviga(){
-        bottom_navigation.setOnNavigationItemReselectedListener{ item->
+        bottom_navigation1.setOnNavigationItemReselectedListener{ item->
             when(item.itemId){
                 R.id.page_1 -> {
                     startActivity(Intent(this,MainActivity::class.java))
-//                    setVrModeEnabled(false,componentName)
                 }
                 R.id.page_2 -> {
                     startActivity(Intent(this,SearchMainActivity::class.java))
