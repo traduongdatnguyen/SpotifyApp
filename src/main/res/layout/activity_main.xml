@@ -41,6 +41,7 @@
                     android:focusable="true"
                     android:padding="8dp"
                     android:layout_marginHorizontal="20dp"
+                    android:onClick="actionSettingAct"
                     android:src="@drawable/icon_settings"/>
             </androidx.appcompat.widget.Toolbar>
 

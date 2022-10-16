@@ -58,6 +58,9 @@ class MainActivity : AppCompatActivity() {
     fun actionIntent1(view: View){
         startActivity(Intent(this@MainActivity,AlbumPlayMusic::class.java))
     }
+    fun actionSettingAct(view: View){
+        startActivity(Intent(this@MainActivity,SettingActivity::class.java))
+    }
 
     private fun getBottomNaviga(){
         bottom_navigation1.setOnNavigationItemReselectedListener{ item->
