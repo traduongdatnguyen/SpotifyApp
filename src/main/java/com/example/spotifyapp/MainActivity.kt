@@ -6,9 +6,12 @@ import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_search_main.*
 
@@ -26,26 +29,27 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-//        myToolbar()
 
+//        layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
+//        recyHome.layoutManager = layoutManager
+//        adapter = SimpleAdapter(titles,images)
+//        recyHome.adapter = adapter
 
-        layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
-        recyHome.layoutManager = layoutManager
-        adapter = SimpleAdapter(titles,images)
-        recyHome.adapter = adapter
+//        recyHome1()
 
-        recyHome1()
-        getBottomNaviga()
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+        val navController = findNavController(R.id.fragmentContainerView)
 
+        bottomNavigationView.setupWithNavController(navController)
     }
-    private fun recyHome1(){
-         var adapter1: RecyclerView.Adapter<ProductoAdapter.ViewHoler>? = null
-         var layoutManager:RecyclerView.LayoutManager? = null
-         adapter1 = ProductoAdapter()
-         layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
-         recyHome1.layoutManager = layoutManager
-         recyHome1.adapter = adapter1
-    }
+//    private fun recyHome1(){
+//         var adapter1: RecyclerView.Adapter<ProductoAdapter.ViewHoler>? = null
+//         var layoutManager:RecyclerView.LayoutManager? = null
+//         adapter1 = ProductoAdapter()
+//         layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
+//         recyHome1.layoutManager = layoutManager
+//         recyHome1.adapter = adapter1
+//    }
 
     private fun myToolbar(){
         lateinit var mytoolbar: Toolbar
@@ -62,20 +66,4 @@ class MainActivity : AppCompatActivity() {
         startActivity(Intent(this@MainActivity,SettingActivity::class.java))
     }
 
-    private fun getBottomNaviga(){
-        bottom_navigation1.setOnNavigationItemReselectedListener{ item->
-            when(item.itemId){
-                R.id.page_1 -> {
-                    startActivity(Intent(this,MainActivity::class.java))
-                }
-                R.id.page_2 -> {
-                    startActivity(Intent(this,SearchMainActivity::class.java))
-                }
-                R.id.page_3 -> {
-                    startActivity(Intent(this,LibrarianMainActivity::class.java))
-                }
-                else ->  startActivity(Intent(this,SearchMainActivity::class.java))
-            }
-        }
-    }
 }

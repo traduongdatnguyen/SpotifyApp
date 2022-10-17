@@ -12,7 +12,6 @@ class LibrarianMainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_librarian_main)
-        getBottomNaviga()
 
 
         val dataLibrarians : ArrayList<DataLibrarians> = arrayListOf(DataLibrarians("image2.png","Hello"))
@@ -24,21 +23,5 @@ class LibrarianMainActivity : AppCompatActivity() {
         recyclerViewLibrarian.layoutManager = layoutManager
         recyclerViewLibrarian.adapter = adapter
     }
-    private fun getBottomNaviga(){
-        bottom_navigation_lib.setOnNavigationItemReselectedListener{ item->
-            when(item.itemId){
-                R.id.page_1 -> {
-                    startActivity(Intent(this,MainActivity::class.java))
-//                    setVrModeEnabled(false,componentName)
-                }
-                R.id.page_2 -> {
-                    startActivity(Intent(this,SearchMainActivity::class.java))
-                }
-                R.id.page_3 -> {
-                    startActivity(Intent(this,LibrarianMainActivity::class.java))
-                }
-                else ->  startActivity(Intent(this,SearchMainActivity::class.java))
-            }
-        }
-    }
+
 }

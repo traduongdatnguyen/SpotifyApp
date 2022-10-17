@@ -279,12 +279,5 @@
         </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
-<com.google.android.material.bottomnavigation.BottomNavigationView
-   android:id="@+id/bottom_navigation"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#282828"
-    android:layout_gravity="bottom"
-    style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
-    app:menu="@menu/bottom_navigation_menu"/>
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

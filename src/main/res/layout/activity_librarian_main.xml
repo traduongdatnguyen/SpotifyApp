@@ -183,12 +183,5 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation_lib"
-        android:layout_width="match_parent"
-        app:menu="@menu/bottom_navigation_menu"
-        android:layout_gravity="bottom"
-        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
-        android:background="@color/bg_bottomNa"
-        android:layout_height="wrap_content"/>
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
