@@ -30,8 +30,6 @@ class HomeFragment : AppCompatActivity() {
         recyHome.adapter = adapter
 
         recyHome1()
-
-
     }
     private fun recyHome1(){
          var adapter1: RecyclerView.Adapter<ProductoAdapter.ViewHoler>? = null
@@ -44,6 +42,8 @@ class HomeFragment : AppCompatActivity() {
     fun onClickIconSettingBar(view: View){
         startActivity(Intent(this,SettingActivity::class.java))
     }
-
+    fun onClickPlaysMusic(view: View){
+        startActivity(Intent(this,AlbumPlayMusic::class.java))
+    }
 
 }
