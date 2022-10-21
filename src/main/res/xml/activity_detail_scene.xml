@@ -3,13 +3,44 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ConstraintSet android:id="@+id/start">
-        <Constraint android:id="@+id/widget" />
-
-        <Constraint android:id="@+id/layoutDetailTille" />
+      x />
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
-        <Constraint android:id="@id/widget" />
+        <Constraint
+            android:layout_height="0.1dp"
+            android:layout_width="match_parent"
+            android:id="@+id/layoutImage" />
+        <Constraint
+            android:id="@+id/layoutDetailTille"
+            android:layout_width="match_parent"
+            android:layout_height=".2dp"
+            app:layout_constraintTop_toBottomOf="@id/layoutImage" />
+        <Constraint
+            android:id="@+id/layoutDetailTille"
+            android:layout_width="match_parent"
+            android:layout_height=".2dp"
+            app:layout_constraintTop_toBottomOf="@id/layoutImage" />
+        <Constraint
+            android:layout_height="wrap_content"
+            app:layout_editor_absoluteX="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutDetailTille"
+            android:id="@+id/linerRecySongList" />
+
     </ConstraintSet>
 
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start"
+        app:duration="100">
+        <KeyFrameSet >
+            <KeyAttribute
+                app:motionTarget="@+id/layoutImage"
+                app:framePosition="100"
+                android:alpha="0" />
+        </KeyFrameSet>
+        <OnSwipe app:maxAcceleration="19.12" />
+    </Transition>
 </MotionScene>
