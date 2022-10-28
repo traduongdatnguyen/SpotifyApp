@@ -15,7 +15,6 @@ class HomeFragment : AppCompatActivity() {
     private val titles = arrayListOf<String>("Como Estrellas Radio","Éxitos España","Todo Indie","Música sin copyright","Descubrimiento semanal")
     private var images =  arrayListOf<Int>(R.drawable.titlephto,R.drawable.titlephto,R.drawable.titlephto,R.drawable.titlephto,R.drawable.titlephto,)
 
-
     private var layoutManager:RecyclerView.LayoutManager? = null
 
     private var adapter: RecyclerView.Adapter<SimpleAdapter.ViewHolder>? = null

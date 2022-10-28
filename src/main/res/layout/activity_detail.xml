@@ -26,7 +26,7 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="-325dp"
             android:scaleType="fitCenter"
             android:src="@drawable/cuarteto" />
@@ -87,7 +87,6 @@
             android:layout_marginHorizontal="15dp"
             android:fontFamily="@font/open_sans"
             android:text="2.237.746 “me gusta”•2h 49m"
-
             android:textColor="#B3B3B3"
             android:textSize="8sp" />
 

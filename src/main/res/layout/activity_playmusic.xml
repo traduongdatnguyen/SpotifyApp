@@ -95,7 +95,7 @@
                         android:fontFamily="@font/open_sans"
                         android:text="Lucas Requena, Ibai Llanos, ortoPilot"
                         android:textColor="#B3B3B3"
-                        android:textSize="12sp" />
+                        android:textSize="12.4sp" />
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <androidx.appcompat.widget.AppCompatImageView
@@ -132,7 +132,7 @@
                 android:layout_weight="5"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:paddingVertical="15dp">
+                android:paddingVertical="15.5dp">
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="wrap_content"

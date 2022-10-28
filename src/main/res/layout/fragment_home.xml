@@ -366,7 +366,7 @@
                             android:text="POPULARES ENTRE LOS OYENTES DE"
                             android:textColor="#B3B3B3"
                             android:textFontWeight="600"
-                            android:textSize="15sp" />
+                            android:textSize="14sp" />
 
                         <TextView
                             style="@style/textTitle"
