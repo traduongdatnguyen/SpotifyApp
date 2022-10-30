@@ -3,6 +3,7 @@ package com.example.spotifyapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import android.view.View
 
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -26,8 +27,10 @@ class HomeFragment : AppCompatActivity() {
         layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
         recyHome.layoutManager = layoutManager
         adapter = SimpleAdapter(titles,images)
-        recyHome.adapter = adapter
 
+        setSupportActionBar(toolbar)
+
+        recyHome.adapter = adapter
         recyHome1()
     }
     private fun recyHome1(){
@@ -45,4 +48,8 @@ class HomeFragment : AppCompatActivity() {
         startActivity(Intent(this,AlbumPlayMusic::class.java))
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu, menu)
+        return true
+    }
 }

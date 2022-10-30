@@ -23,7 +23,6 @@
         app:backgroundTint="@color/black"
         app:menu="@menu/bottom_navigation_menu" />
 
-
     <fragment
         android:id="@+id/fragmentContainerView"
         android:name="androidx.navigation.fragment.NavHostFragment"
